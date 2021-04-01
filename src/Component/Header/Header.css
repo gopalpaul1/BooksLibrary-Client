@@ -1,18 +1,22 @@
 .navContainer{
     display: flex;
     justify-content: center;
+    background-color: #ffffffef;
     box-shadow: 0px 5px 10px lightgrey;
+    position: sticky;
+    top: 0;
 }
 .navContent{
     margin-left: 600px;
     margin-top: 30px;
 }
 h1{
-    color: blueviolet;
+    color: #581399;
 }
 .text{
     text-decoration: none;
     font-size: large;
+    color: #581399;
     margin: 10px;
 }
 .Button{

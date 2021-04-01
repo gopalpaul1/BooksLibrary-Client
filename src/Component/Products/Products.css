@@ -1,0 +1,25 @@
+.ProductsContent{
+    width: 300px;
+    border: 1px solid red;
+    margin-top: 40px;
+
+}
+
+.Image{
+    width: 300px;
+    height: 320px;
+}
+
+.PriceBuy{
+    display: flex;
+    justify-content: center;
+}
+.button{
+    margin-left: 140px;
+    width: 120px;
+    height: 38px;
+    border: none;
+    color: white;
+    font-size: large;
+    background-color: #33d383;
+}

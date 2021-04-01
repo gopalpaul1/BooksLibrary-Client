@@ -9,6 +9,7 @@ import Home from './Component/Home/Home';
 import NoMatch from './Component/NoMatch/NoMatch';
 import Header from './Component/Header/Header';
 import Order from './Component/Orders/Order';
+import Admin from './Component/Admin/Admin';
 
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/order">
             <Order />
+          </Route>
+          <Route path="/admin">
+            <Admin />
           </Route>
           <Route exact path="/">
             <Home />
