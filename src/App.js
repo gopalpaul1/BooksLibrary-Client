@@ -22,7 +22,7 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/order">
+          <Route path="/order/:id">
             <Order />
           </Route>
           <Route path="/admin">
