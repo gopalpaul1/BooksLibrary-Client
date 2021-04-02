@@ -1,0 +1,45 @@
+.BooksContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.BooksHeader{
+    width: 250px;
+    height: 500px;
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+    background-color: darkgrey;
+}
+.AddFrom{
+    border: 2px solid red;
+    width: 400px;
+    height: 300px;
+    margin-right: 320px;
+    padding: 10px;
+}
+
+.InputFiled{
+    width:300px;
+    margin-bottom:35px;
+    padding: 5px;
+    font-size: large;
+    margin-left: 34px;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+.Submit{
+    border:none;
+    width: 300px;
+    height: 35px;
+    font-size: large;
+    margin-left: 34px;
+    color: white;
+    background-color: #18b37f;
+}
+.filed{
+    
+    color: white;
+    
+}

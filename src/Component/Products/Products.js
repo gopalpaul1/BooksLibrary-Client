@@ -3,8 +3,8 @@ import { useHistory } from 'react-router';
 import './Products.css'
 
 const Products = (props) => {
-    const {name, price, image, id} = props.product
 
+    const {name, price, image, id} = props.product
     let history = useHistory()
 
     const handleAddProduct = (id) => {

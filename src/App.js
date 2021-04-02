@@ -10,11 +10,20 @@ import NoMatch from './Component/NoMatch/NoMatch';
 import Header from './Component/Header/Header';
 import Order from './Component/Orders/Order';
 import Admin from './Component/Admin/Admin';
+import Login from './Component/Login/Login';
+import { createContext } from 'react';
+import { useState } from 'react';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 
+
+export const UserContext = createContext(); 
 
 function App() {
+
+  const [loggedInUser, setLoggedInUser] = useState({});
+
   return (
-    <div className="App">
+    <UserContext.Provider value = {[loggedInUser,setLoggedInUser]}>
       
       <Router>
         <Header />
@@ -22,11 +31,14 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/order/:id">
+          <PrivateRoute path="/order/:id">
             <Order />
-          </Route>
-          <Route path="/admin">
+          </PrivateRoute>
+          <PrivateRoute path="/admin">
             <Admin />
+          </PrivateRoute>
+          <Route path="/login">
+            <Login />
           </Route>
           <Route exact path="/">
             <Home />
@@ -37,7 +49,7 @@ function App() {
         </Switch>
       </Router>
 
-    </div>
+    </UserContext.Provider>
   );
 }
 

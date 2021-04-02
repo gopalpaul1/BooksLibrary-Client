@@ -4,6 +4,7 @@ import Checkout from '../Checkout/Checkout';
 
 const Order = () => {
     let { id } = useParams();
+    console.log(id)
     
     const [product, setProduct] = useState([])
 
