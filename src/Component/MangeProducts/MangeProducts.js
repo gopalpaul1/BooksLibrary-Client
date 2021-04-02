@@ -6,7 +6,7 @@ const MangeProducts = () => {
     const [allProducts, setAllProducts] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5045/products')
+        fetch('https://fierce-thicket-77007.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setAllProducts(data))
     }, [])

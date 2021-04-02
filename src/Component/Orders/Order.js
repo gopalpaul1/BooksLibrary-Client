@@ -10,7 +10,7 @@ const Order = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5045/product/${id}`)
+        fetch(`https://fierce-thicket-77007.herokuapp.com/product/${id}`)
         .then(res => res.json())
         .then(data => setProduct(data))
 
