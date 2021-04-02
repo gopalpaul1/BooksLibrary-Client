@@ -1,13 +1,14 @@
 .navContainer{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     background-color: #ffffffef;
     box-shadow: 0px 5px 10px lightgrey;
     position: sticky;
     top: 0;
 }
 .navContent{
-    margin-left: 600px;
+    margin-left: 500px;
     margin-top: 10px;
 }
 h1{
@@ -18,4 +19,45 @@ h1{
     font-size: large;
     color: #581399;
     margin: 10px;
+}
+.Login{
+    border: none;
+    width: 100px;
+    height: 35px;
+    color: white;
+    font-size: large;
+    border-radius: 50px;
+    background-color: crimson;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .navContainer{
+        background-color: #ffffffef;
+        box-shadow: 0px 5px 10px lightgrey;
+        position: sticky;
+        top: 0;
+    }
+    .navContent{
+        margin: 0%;
+        margin-bottom: 10px;
+    }
+    h1{
+        color: #581399;
+    }
+    .text{
+        text-decoration: none;
+        font-size: large;
+        color: #581399;
+        margin: 10px;
+    }
+    .Login{
+        border: none;
+        width: 100px;
+        height: 35px;
+        color: white;
+        font-size: large;
+        border-radius: 50px;
+        background-color: #1cb463;
+    }
 }

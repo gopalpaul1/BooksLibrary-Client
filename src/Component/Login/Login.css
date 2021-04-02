@@ -1,0 +1,13 @@
+.GoogleLogin{
+    width: 260px;
+    height: 40px;
+    font-size: large;
+    border-radius: 50px;
+    border: 2px solid lightgrey;
+    background-color: white;
+    text-align: center;
+}
+.loginContent{
+    text-align: center;
+    margin-top: 200px;
+}

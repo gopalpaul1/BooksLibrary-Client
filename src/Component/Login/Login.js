@@ -5,6 +5,8 @@ import firebaseConfig from '../../firebaseConfig';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
+import './Login.css'
+import googleIcon from '../Icons/Group 573.png'
 
 !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
 
@@ -46,9 +48,8 @@ const Login = () => {
         })
     }
     return (
-        <div>
-            <p>Name: {loggedInUser.name}</p>
-            <button onClick={handleSignin}>Signin with Google</button>
+        <div className="loginContent">
+            <button className="GoogleLogin" onClick={handleSignin}><img style={{width:"22px"}} src={googleIcon} alt="icons"/> Signin with Google</button>
         </div>
     );
 };
