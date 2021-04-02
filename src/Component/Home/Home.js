@@ -14,11 +14,15 @@ const Home = () => {
     }, [])
     return (
 
-        <div className="ProductsContainer">
-            {
-                products.map(product => <Products product={product} />)
-            }
+        <div>
+            <p className="search"><input className="input" placeholder="Search Book" type="search" name="search"/><button className="Search">Search</button></p>
+            <div className="ProductsContainer">
+                {
+                    products.map(product => <Products product={product} />)
+                }
+            </div>
         </div>
+
     );
 };
 

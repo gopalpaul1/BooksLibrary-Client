@@ -5,6 +5,29 @@
     margin-top: 60px;
     margin-bottom: 80px;
 }
+.search{
+    
+    text-align: center;
+    margin-top: 60px;
+}
+
+.input{
+    border: 2px solid lightgrey;
+    border-radius: 50px;
+    width: 400px;
+    padding: 4px;
+}
+.Search{
+    width: 100px;
+    height: 35px;
+    border: none;
+    font-size: large;
+    border-radius: 50px;
+    margin-left: 5px ;
+    background-color: lightseagreen;
+    color: white;
+    
+}
 
 @media only screen and (max-width: 600px) {
     .ProductsContainer{
@@ -12,5 +35,28 @@
         grid-template-columns: repeat(1, 1fr);
         margin-top: 60px;
         margin-bottom: 80px;
+    }
+    .search{
+    
+        text-align: center;
+        margin-top: 60px;
+    }
+    
+    .input{
+        border: 2px solid lightgrey;
+        border-radius: 50px;
+        width: 300px;
+        padding: 4px;
+    }
+    .Search{
+        width: 100px;
+        height: 35px;
+        border: none;
+        font-size: large;
+        border-radius: 50px;
+        margin-left: 5px ;
+        background-color: lightseagreen;
+        color: white;
+        
     }
 }
