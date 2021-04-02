@@ -45,11 +45,12 @@ const Admin = () => {
 
     }
 
+
     return (
         <div className="BooksContainer">
-            
+
             <div className="BooksHeader">
-                <Link className="filed" to="/manage"><img src={ManageIcon} style={{width:"20px"}} alt="icons"/> Manage Books</Link>
+                <Link className="filed" to="/manageProducts"><img src={ManageIcon} style={{width:"20px"}} alt="icons"/> Manage Books</Link>
                 <br/>
                 <Link className="filed" to="/Admin"> <img src={AddIcon} style={{width:"20px"}} alt="icons"/> Add Book</Link>
                 <br/>
