@@ -33,6 +33,15 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="*">
+            <NoMatch />
+          </Route>
           <PrivateRoute path="/checkout/:id">
             <Checkout/>
           </PrivateRoute>
@@ -45,15 +54,6 @@ function App() {
           <PrivateRoute path="/manageProducts">
             <MangeProducts />
           </PrivateRoute>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="*">
-            <NoMatch />
-          </Route>
         </Switch>
       </Router>
 
