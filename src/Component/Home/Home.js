@@ -13,11 +13,17 @@ const Home = () => {
         .then(res => res.json())
         .then(data => setProducts(data))
     }, [])
+
+    const handleClick = () => {
+        
+    }
     return (
 
         <div>
             <p className="search"><input className="input" placeholder="Search Book" type="search" name="search"/><button className="Search">Search</button></p>
-            {/* <Spinner animation="border" /> */}
+            {
+                products.length === 0 && <Spinner animation="border" variant="info" className="Spinner" />
+            }
             <div className="ProductsContainer">
                 {
                     products.map(product => <Products product={product} key={product._id} />)

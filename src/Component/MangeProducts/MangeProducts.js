@@ -17,8 +17,6 @@ const MangeProducts = () => {
     }, [])
 
     const deleteProduct = (event,id) => {
-        
-        console.log(id)
 
         fetch(`https://fierce-thicket-77007.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
@@ -27,7 +25,7 @@ const MangeProducts = () => {
         .then(result => {
             console.log(result)
             if(result){
-                return event.target.parentNode.style.display = "none"
+                console.log('delete successfully')
             }
         })
 
@@ -45,7 +43,7 @@ const MangeProducts = () => {
                     <p>Action</p>
                 </div>
                 {
-                    allProducts.map(pd => <div>
+                    allProducts.map(pd => <div key = {pd._id}>
                         <Table style={{width:"600px"}} striped bordered hover>
                             <tbody>
                                 <tr>
@@ -56,7 +54,6 @@ const MangeProducts = () => {
                                 </tr>
                             </tbody>
                         </Table>
-
                     </div>)
                 }
             </div>

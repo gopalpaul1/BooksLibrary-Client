@@ -25,9 +25,13 @@
     border-radius: 50px;
     margin-left: 5px ;
     background-color: lightseagreen;
-    color: white;
-    
+    color: white; 
 }
+.Spinner{
+    margin-left: 46%;
+}
+
+
 
 @media only screen and (max-width: 600px) {
     .ProductsContainer{
