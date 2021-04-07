@@ -18,8 +18,6 @@ const Login = () => {
         email:'',
         password:'',
         photo:''
-        // error:'',
-        // success: false
     })
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)

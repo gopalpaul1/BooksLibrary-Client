@@ -9,6 +9,7 @@ import Home from './Component/Home/Home';
 import NoMatch from './Component/NoMatch/NoMatch';
 import Header from './Component/Header/Header';
 import Order from './Component/Orders/Order';
+import Checkout from './Component/Checkout/Checkout'
 import Admin from './Component/Admin/Admin';
 import Login from './Component/Login/Login';
 import { createContext } from 'react';
@@ -32,8 +33,11 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <PrivateRoute path="/order/:id">
-            <Order />
+          <PrivateRoute path="/checkout/:id">
+            <Checkout/>
+          </PrivateRoute>
+          <PrivateRoute path="/order">
+            <Order/>
           </PrivateRoute>
           <PrivateRoute path="/admin">
             <Admin />

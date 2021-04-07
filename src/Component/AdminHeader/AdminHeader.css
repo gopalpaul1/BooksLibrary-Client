@@ -1,0 +1,18 @@
+.BooksHeader{
+    width: 250px;
+    height: 513px;
+    padding: 20px;
+    text-align: left;
+    font-size: large;
+    background-color: grey;
+    position: fixed;
+}
+.filed{
+    color: white;
+}
+.adminHeading{
+    text-align: center;
+    color: white;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffffff;
+}

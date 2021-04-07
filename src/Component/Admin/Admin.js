@@ -2,10 +2,8 @@ import './Admin.css'
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
-import ManageIcon from '../Icons/grid 1.png'
-import AddIcon from '../Icons/plus 1.png'
-import EditIcon from '../Icons/edit 1.png'
+import AdminHeader from '../AdminHeader/AdminHeader';
+
 
 const Admin = () => {
     const { register, handleSubmit, watch, errors } = useForm();
@@ -14,12 +12,13 @@ const Admin = () => {
     const onSubmit = data => {
         const products = {
             name: data.name,
+            weight: data.weight,
             price: data.price,
             imageURL: imageURL
         }
-
-        const url = `http://localhost:5045/addProduct`
         console.log(products)
+        const url = `https://fierce-thicket-77007.herokuapp.com/addProduct`
+        
         fetch(url, {
             method: 'POST',
             headers:{
@@ -49,18 +48,15 @@ const Admin = () => {
     return (
         <div className="BooksContainer">
 
-            <div className="BooksHeader">
-                <Link className="filed" to="/manageProducts"><img src={ManageIcon} style={{width:"20px"}} alt="icons"/> Manage Books</Link>
-                <br/>
-                <Link className="filed" to="/Admin"> <img src={AddIcon} style={{width:"20px"}} alt="icons"/> Add Book</Link>
-                <br/>
-                <Link className="filed" to="/Admin"><img src={EditIcon} style={{width:"20px"}} alt="icons"/> Edit Book</Link>
-            </div>
+            <AdminHeader />
 
             <div>
                 <h2>Add Book</h2>
                 <form className="AddFrom" onSubmit={handleSubmit(onSubmit)}>
                 <input className="InputFiled" name="name" defaultValue="Add Product" ref={register} />
+                <br/>
+                <input className="InputFiled" name="weight" defaultValue="Add weight" ref={register} />
+                
                 <br/>
                 <input className="InputFiled" name="price" defaultValue="Add Price" ref={register} />
                 <br/>
